@@ -1,0 +1,341 @@
+---
+title: "Semana 1: Pensar como economista"
+subtitle: "Escasez, costo de oportunidad, incentivos y análisis marginal"
+author: "Toscano Luconi Esquivel"
+date: "15 de mayo, 2025"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    lang: es
+    highlight-style: github
+    code-fold: true
+    code-tools: true
+    theme: cosmo
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(ggplot2)
+library(dplyr)
+```
+
+## Lecturas de esta semana
+
+| Tipo | Referencia |
+|------|-----------|
+| **Obligatoria** | Mankiw, cap. 1 "Los diez principios de la economía" y cap. 2 "Pensando como economista" |
+| **Avanzada (opcional)** | Pindyck y Rubinfeld, cap. 1 "Prolegómenos" |
+
+::: {.callout-tip title="¿Por qué estas lecturas?"}
+El capítulo 1 de Mankiw establece los principios fundamentales que guiarán todo el curso. El capítulo 2 introduce la forma en que los economistas construyen modelos y distinguen entre análisis positivo y normativo. Pindyck amplía esa lógica con mayor rigor formal.
+:::
+
+---
+
+## ¿Qué es la economía?
+
+La economía es la ciencia social que estudia cómo los individuos, las empresas y las sociedades toman decisiones sobre el uso de recursos escasos para satisfacer necesidades ilimitadas.
+
+En su núcleo, la economía es una disciplina sobre **la elección**: cada vez que elegimos algo, estamos renunciando a otra cosa. Esa renuncia tiene un costo, y entenderlo es el punto de partida del análisis económico.
+
+::: {.callout-note title="Distinción fundamental"}
+- **Microeconomía**: estudia las decisiones de individuos, hogares y empresas, y cómo interactúan en los mercados.
+- **Macroeconomía**: estudia el comportamiento de la economía en su conjunto: crecimiento, inflación, desempleo, política fiscal y monetaria.
+
+Este curso cubre ambas. Las semanas 1 a 8 son microeconomía; las semanas 9 a 15 son macroeconomía.
+:::
+
+---
+
+## El problema central: la escasez
+
+La **escasez** es la condición fundamental de la economía. Los recursos —tiempo, dinero, trabajo, capital, tierra— son limitados. Las necesidades y deseos humanos, no.
+
+Esto significa que toda sociedad, independientemente de su sistema económico, debe responder tres preguntas:
+
+1. **¿Qué producir?** ¿Bienes de consumo o de capital? ¿Servicios públicos o privados?
+2. **¿Cómo producirlo?** ¿Qué combinación de factores productivos usar?
+3. **¿Para quién producirlo?** ¿Cómo se distribuye lo producido?
+
+La forma en que una sociedad responde estas preguntas define su **sistema económico**.
+
+---
+
+## Los diez principios de Mankiw
+
+Mankiw organiza los fundamentos de la economía en diez principios, agrupados en tres bloques.
+
+### Cómo toman decisiones los individuos
+
+**Principio 1 — Los individuos se enfrentan a disyuntivas (*trade-offs*)**
+
+Obtener algo que queremos generalmente implica renunciar a otra cosa. No hay almuerzo gratis. La sociedad enfrenta el clásico *trade-off* entre **eficiencia** (aprovechar al máximo los recursos) y **equidad** (distribuirlos de manera justa).
+
+**Principio 2 — El costo de algo es aquello a lo que se renuncia para conseguirlo**
+
+Esto es el **costo de oportunidad**: el valor de la mejor alternativa a la que renunciamos al tomar una decisión. Ver la siguiente sección para un desarrollo completo.
+
+**Principio 3 — Las personas racionales piensan en términos marginales**
+
+Las decisiones económicas relevantes no son "¿estudio o no estudio?" sino "¿estudio una hora más o no?". El **análisis marginal** compara el beneficio marginal con el costo marginal de una unidad adicional.
+
+**Principio 4 — Los individuos responden a los incentivos**
+
+Si el costo o el beneficio de una acción cambia, el comportamiento cambia. Los precios son el incentivo más poderoso en una economía de mercado.
+
+### Cómo interactúan los individuos
+
+**Principio 5 — El comercio puede mejorar el bienestar de todos**
+
+El intercambio permite la especialización. Un país —o una persona— no necesita producir todo lo que consume para estar mejor.
+
+**Principio 6 — Los mercados normalmente son una buena forma de organizar la actividad económica**
+
+La "mano invisible" de Adam Smith: los precios coordinan las decisiones de millones de agentes sin que ninguno tenga que conocer el plan completo.
+
+**Principio 7 — El gobierno puede mejorar a veces los resultados del mercado**
+
+Cuando existen **fallas de mercado** (externalidades, bienes públicos, poder de mercado, información asimétrica), la intervención del Estado puede mejorar el bienestar. Semana 7 del curso.
+
+### Cómo funciona la economía en su conjunto
+
+**Principio 8 — El nivel de vida de un país depende de su capacidad para producir bienes y servicios**
+
+La **productividad** —producción por hora de trabajo— es el determinante más importante del nivel de vida a largo plazo.
+
+**Principio 9 — Los precios suben cuando el gobierno imprime demasiado dinero**
+
+La inflación es, en última instancia, un fenómeno monetario. Semanas 10 y 12.
+
+**Principio 10 — La sociedad se enfrenta a una disyuntiva a corto plazo entre inflación y desempleo**
+
+La curva de Phillips. A corto plazo, reducir la inflación tiene costos en empleo. Semana 14.
+
+---
+
+## El costo de oportunidad
+
+El **costo de oportunidad** es el concepto más importante del curso y uno de los más contraintuitivos en la vida cotidiana.
+
+> El costo de oportunidad de una decisión es el valor de la mejor alternativa a la que se renuncia.
+
+### Ejemplo: ¿ir a la universidad o trabajar?
+
+Suponga que usted decide estudiar en Lead University. Los costos que normalmente considera son:
+
+- Matrícula y mensualidades
+- Libros y materiales
+- Transporte
+
+Pero hay un costo que usualmente se omite: el **ingreso que dejó de ganar** por no trabajar tiempo completo durante los años que dura la carrera. Ese ingreso sacrificado es parte del costo real de estudiar.
+
+::: {.callout-warning title="Error común"}
+El costo de oportunidad **no** es la suma de todas las alternativas posibles, sino solo el valor de **la mejor** alternativa disponible. Si tenía dos ofertas de trabajo y eligió estudiar, el costo de oportunidad es el valor de la mejor oferta, no la suma de ambas.
+:::
+
+### Costos explícitos vs. costos implícitos
+
+| Tipo de costo | Definición | Ejemplo |
+|---------------|-----------|---------|
+| **Explícito** | Requiere un desembolso monetario directo | Matrícula, libros |
+| **Implícito** | No requiere desembolso, pero tiene valor real | Ingreso sacrificado, tiempo |
+
+El **costo económico total** incluye ambos. La contabilidad tradicional solo captura los costos explícitos, lo que puede llevar a decisiones subóptimas.
+
+---
+
+## El análisis marginal
+
+El **análisis marginal** es la herramienta central del pensamiento económico. Consiste en evaluar el efecto de una pequeña variación en una decisión.
+
+La lógica es simple:
+
+$$B_{Mg} \geq C_{Mg}$$
+
+Donde $B_{Mg}$ es el beneficio marginal y $C_{Mg}$ es el costo marginal de la unidad adicional.
+
+### Ejemplo: ¿cuántas horas estudiar?
+
+```{r}
+#| label: fig-marginal
+#| fig-cap: "Análisis marginal del tiempo de estudio"
+#| fig-alt: "Gráfico que muestra cómo el beneficio marginal decrece y el costo marginal aumenta con las horas de estudio, con un óptimo en su intersección"
+
+horas <- 1:8
+
+beneficio_marginal <- c(9, 8, 7, 5.5, 4, 3, 2, 1)
+costo_marginal    <- c(1, 1.5, 2, 3, 4, 5.5, 7, 8.5)
+
+datos_marginal <- data.frame(
+  horas             = rep(horas, 2),
+  valor             = c(beneficio_marginal, costo_marginal),
+  tipo              = rep(c("Beneficio marginal", "Costo marginal"), each = 8)
+)
+
+optimo <- data.frame(horas = 5, valor = 4)
+
+ggplot(datos_marginal, aes(x = horas, y = valor, color = tipo)) +
+  geom_line(linewidth = 1.1) +
+  geom_point(size = 3) +
+  geom_point(data = optimo, aes(x = horas, y = valor),
+             color = "black", size = 5, shape = 21,
+             fill = "gold", inherit.aes = FALSE) +
+  annotate("text", x = 5.3, y = 4.4,
+           label = "Óptimo (5 horas)", hjust = 0, size = 3.5) +
+  annotate("segment", x = 5, xend = 5, y = 0, yend = 4,
+           linetype = "dashed", color = "gray50") +
+  scale_color_manual(values = c("Beneficio marginal" = "#2166ac",
+                                 "Costo marginal"     = "#d73027")) +
+  scale_x_continuous(breaks = 1:8) +
+  labs(
+    x     = "Horas de estudio",
+    y     = "Valor (unidades arbitrarias)",
+    color = NULL
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom")
+```
+
+El punto óptimo es donde $BeMg = CoMg$. Estudiar menos de 5 horas deja beneficios sin aprovechar; estudiar más de 5 horas agrega más costo que beneficio.
+
+::: {.callout-note title="Principio del análisis marginal"}
+La mayoría de las decisiones económicas relevantes son **marginales**, no absolutas. No es "¿produzco o no produzco?" sino "¿produzco una unidad más?". No es "¿trabajo o no trabajo?" sino "¿acepto esta hora extra?".
+:::
+
+---
+
+## Los incentivos
+
+Los individuos responden a los **incentivos**: señales que modifican el costo o el beneficio de una acción y, por tanto, alteran el comportamiento.
+
+En economía, el precio es el incentivo más poderoso. Cuando el precio de un bien sube:
+
+- Los consumidores tienen incentivo para consumir menos (o buscar sustitutos).
+- Los productores tienen incentivo para producir más.
+
+### Incentivos y política pública
+
+El análisis de incentivos es fundamental para evaluar políticas. Una política que ignora cómo responden los agentes económicos a los incentivos puede producir efectos contrarios a los deseados.
+
+**Ejemplo clásico:** Si el gobierno establece un precio máximo de alquiler por debajo del precio de equilibrio, el incentivo para construir nuevas unidades habitacionales cae. El resultado puede ser una reducción de la oferta de vivienda, exactamente lo contrario de lo que se buscaba.
+
+---
+
+## Modelos económicos
+
+Los economistas usan **modelos** para simplificar la realidad y analizar relaciones causales. Un modelo es una representación simplificada que captura los elementos esenciales de un fenómeno, descartando los detalles irrelevantes.
+
+Los modelos incluyen:
+
+- **Supuestos**: simplifican la realidad para hacer el análisis manejable.
+- **Variables**: las magnitudes que el modelo relaciona.
+- **Relaciones causales**: cómo cambia una variable cuando cambia otra.
+
+El supuesto más común es el **ceteris paribus** ("todo lo demás constante"), que permite aislar el efecto de una variable sin que otras interfieran.
+
+### Análisis positivo vs. normativo
+
+| Tipo | Pregunta | Ejemplo |
+|------|---------|---------|
+| **Positivo** | ¿Qué *es*? ¿Qué *ocurrirá*? | "Un aumento del salario mínimo reduce el empleo juvenil." |
+| **Normativo** | ¿Qué *debería ser*? | "El gobierno debería aumentar el salario mínimo." |
+
+La economía como ciencia se ocupa principalmente del análisis positivo. Las conclusiones normativas involucran juicios de valor que van más allá de los datos.
+
+---
+
+## La Frontera de Posibilidades de Producción
+
+El modelo más sencillo para visualizar la escasez y el costo de oportunidad es la **Frontera de Posibilidades de Producción (FPP)**.
+
+```{r}
+#| label: fig-fpp
+#| fig-cap: "Frontera de Posibilidades de Producción: Costa Rica (hipotético)"
+#| fig-alt: "Curva cóncava que muestra las combinaciones posibles de producción de café y semiconductores, con puntos dentro, sobre y fuera de la frontera"
+
+x <- seq(0, 10, by = 0.1)
+fpp <- sqrt(100 - x^2)
+
+datos_fpp <- data.frame(x = x, y = fpp)
+
+puntos_especiales <- data.frame(
+  x      = c(4, 6, 11),
+  y      = c(sqrt(100 - 72), sqrt(100 - 36), 3),
+  etiq   = c("A (ineficiente)", "B (eficiente)", "C (inalcanzable)"),
+  tipo   = c("ineficiente", "eficiente", "inalcanzable")
+)
+
+ggplot() +
+  geom_line(data = datos_fpp, aes(x = x, y = y),
+            color = "#2166ac", linewidth = 1.3) +
+  geom_ribbon(data = datos_fpp, aes(x = x, ymin = 0, ymax = y),
+              fill = "#2166ac", alpha = 0.08) +
+  geom_point(data = puntos_especiales,
+             aes(x = x, y = y, color = tipo), size = 4) +
+  geom_text(data = puntos_especiales,
+            aes(x = x, y = y, label = etiq, color = tipo),
+            nudge_y = 0.6, size = 3.5) +
+  scale_color_manual(values = c(
+    "ineficiente"  = "#f4a582",
+    "eficiente"    = "#2166ac",
+    "inalcanzable" = "#d73027"
+  )) +
+  labs(
+    x     = "Café (millones de kg)",
+    y     = "Semiconductores (miles de unidades)",
+    color = NULL
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "none") +
+  coord_cartesian(xlim = c(0, 12), ylim = c(0, 12))
+```
+
+La FPP ilustra tres conceptos simultáneamente:
+
+- **Escasez**: no todos los puntos son alcanzables (C está fuera de la frontera).
+- **Eficiencia**: los puntos sobre la curva son eficientes (B); los de adentro, ineficientes (A).
+- **Costo de oportunidad**: moverse a lo largo de la frontera implica producir menos de un bien para producir más del otro.
+
+::: {.callout-note title="La FPP y el crecimiento económico"}
+Un desplazamiento *hacia afuera* de la FPP representa **crecimiento económico**: más recursos, mejor tecnología o mayor productividad permiten producir más de ambos bienes simultáneamente. Este tema se retoma en la semana 9 con el PIB y el crecimiento.
+:::
+
+---
+
+## Resumen de la semana
+
+| Concepto | Definición clave |
+|----------|----------------|
+| **Escasez** | Los recursos son limitados; las necesidades, no |
+| **Costo de oportunidad** | Valor de la mejor alternativa sacrificada |
+| **Análisis marginal** | Comparar $BeMg$ vs $CoMg$ de la siguiente unidad |
+| **Incentivos** | Señales que modifican el comportamiento al alterar costos o beneficios |
+| **Ceteris paribus** | Supuesto de que todo lo demás permanece constante |
+| **FPP** | Modelo que ilustra escasez, eficiencia y costo de oportunidad |
+| **Análisis positivo** | Describe lo que *es* |
+| **Análisis normativo** | Prescribe lo que *debería ser* |
+
+---
+
+## Preguntas de reflexión
+
+1. Un estudiante dice: "La universidad es gratis para mí porque tengo beca completa." ¿Está calculando correctamente el costo de asistir a la universidad? ¿Qué costo está omitiendo?
+
+2. El gobierno de Costa Rica decide subsidiar el precio de la gasolina para reducir el costo de vida. Usando el concepto de incentivos, ¿qué efectos secundarios podría tener esta política?
+
+3. Costa Rica produce tanto café como dispositivos médicos para exportación. Dibuje una FPP hipotética e identifique un punto eficiente, uno ineficiente y uno inalcanzable. ¿Qué tendría que ocurrir para que la FPP se desplace hacia afuera?
+
+4. ¿Es la siguiente afirmación positiva o normativa? *"El aumento del salario mínimo en Costa Rica generó desempleo en el sector de pequeñas empresas durante 2023."* Justifique.
+
+---
+
+## Para la próxima semana
+
+**Semana 2 — Oferta, demanda, equilibrio y shocks de mercado**
+
+- Leer Mankiw, capítulo 4 antes de clase.
+- Traer un ejemplo de un mercado costarricense donde haya ocurrido un cambio de precio notable en el último año. Discutiremos las posibles causas en clase.
