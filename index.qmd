@@ -7,8 +7,11 @@ author: "Toscano Luconi Esquivel"
 ## Bienvenida al curso
 
 Este sitio contiene los materiales del curso **BCC4303 – Principios de Economía**. 
-Aquí encontrarás las notas de clase, los slides de cada sesión, y los datos 
-para los ejercicios prácticos.
+Aquí encontraran las notas de clase, los slides de cada sesión, y los datos 
+para los ejercicios prácticos. Todas las notas se basan en la revisión de bibliografía 
+(Mankiw, Pyndick y De Gregorio, así como otras fuentes), y fueron compiladas en esta página
+por medio de Visual Studio Code, LaTex, R y Claude.
+
 
 ## Estructura del curso
 
