@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Principios de Economía"
+  description: "BCC4303 — Lead University"
+  navbar:
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Notas de clase"
+        menu:
+          - text: "1. Fundamentos y principios"
+            href: notas/01-principios.qmd
+          - text: "2. Oferta y demanda"
+            href: notas/02-oferta-demanda.qmd
+          - text: "3. Eficiencia de los mercados"
+            href: notas/03-eficiencia.qmd
+          - text: "4. Sector externo y sistema financiero"
+            href: notas/04-sector-externo.qmd
+          - text: "5. Política macroeconómica y dinero"
+            href: notas/05-macro-dinero.qmd
+          - text: "6. Tipo de cambio y competitividad"
+            href: notas/06-tipo-cambio.qmd
+          - text: "7. Oferta y demanda agregada"
+            href: notas/07-oa-da.qmd
+      - text: "Slides"
+        href: slides.qmd
+      - text: "Datos"
+        href: datos.qmd
+    right:
+      - icon: github
+        href: https://github.com/tosluconi/PrincipiosEcon
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    lang: es
+    highlight-style: github
+    code-fold: true
+    code-tools: true

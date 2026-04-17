@@ -1,0 +1,41 @@
+---
+title: "Principios de Economía"
+subtitle: "BCC4303 · Lead University · 2025"
+author: "Toscano Luconi Esquivel"
+---
+
+## Bienvenida al curso
+
+Este sitio contiene los materiales del curso **BCC4303 – Principios de Economía**. 
+Aquí encontrarás las notas de clase, los slides de cada sesión, y los datos 
+para los ejercicios prácticos.
+
+## Estructura del curso
+
+El curso se divide en dos grandes bloques:
+
+**Microeconomía**
+
+- Fundamentos del análisis económico
+- Oferta, demanda y elasticidades
+- Eficiencia de los mercados y externalidades
+
+**Macroeconomía**
+
+- Medición de la actividad económica (PIB, IPC, inflación)
+- Sistema financiero y sector externo
+- Política monetaria y fiscal
+- Oferta y demanda agregada
+- Tipo de cambio y economía abierta
+
+## Proyecto final
+
+El proyecto consiste en un análisis económico aplicado de un mercado 
+costarricense. Revisa el [sílabo completo](#) para ver los entregables 
+y fechas clave.
+
+## Contacto
+
+- **Correo:** toscano.luconi@ulead.ac.cr  
+- **Horas de oficina:** viernes 4:00–7:00 p.m.  
+- **LinkedIn / ResearchGate / Google Scholar:** Toscano Luconi Esquivel
