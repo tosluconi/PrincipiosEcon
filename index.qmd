@@ -7,13 +7,22 @@ author: "Toscano Luconi Esquivel"
 ## Bienvenida al curso
 
 Este sitio contiene los materiales del curso **BCC4303 – Principios de Economía**. 
-Aquí encontraran las notas de clase, los slides de cada sesión, y los datos 
+Aquí encontrarán las notas de clase, los slides de cada sesión, y los datos 
 para los ejercicios prácticos. Todas las notas se basan en la revisión de bibliografía 
-(Mankiw, Pyndick y De Gregorio, así como otras fuentes), y fueron compiladas en esta página
-por medio de Visual Studio Code, LaTex, R y Claude.
+(Mankiw, Pyndick y De Gregorio, así como otras fuentes), y fueron compiladas en Visual Studio Code
+con R como lenguaje estadístico y Claude como modelo de lenguaje.
+
+Este curso tendrá una partícularidad, y es que vamos a invertir el método tradicional de estudiar los 
+principios de economía. Generalmente empezamos por una introducción al pensamiento ecónomico, 
+para adentrarnos al estudio de la microeconomía (agentes y mercados) y terminar en el estudio 
+agregado (países, regulación y otros). Nosotros no lo haremos así. Vamos a partir de una pregunta 
+guía todo el cuatrimestre: ¿por qué Costa Rica crece pero la desigualdad persite?
+Para responder a esta interrogante, analizaremos temas desde el tipo de cambio, la demanda agregada, inflación y desempleo, hasta aterrizar
+en aspectos puntuales de cada mercado y hasta del consumidor (regulación de precios, curvas de indiferencia, gustos y preferencias).
 
 
-## Estructura del curso
+
+## Contenidos
 
 El curso se divide en dos grandes bloques:
 
@@ -31,11 +40,16 @@ El curso se divide en dos grandes bloques:
 - Oferta y demanda agregada
 - Tipo de cambio y economía abierta
 
+
 ## Proyecto final
 
 El proyecto consiste en un análisis económico aplicado de un mercado 
-costarricense. Revisa el [sílabo completo](#) para ver los entregables 
-y fechas clave.
+costarricense. Este ejercicio busca fomentar en el estudiante la observación
+y comprensión de fenómenos económicos, desde su concepción microecónomica, 
+hasta sus implicaciones macroeconómicas.
+
+En el [sílabo del curso](#) se pueden revisar las opciones de temas, 
+entregables y fechas clave.
 
 ## Contacto
 
