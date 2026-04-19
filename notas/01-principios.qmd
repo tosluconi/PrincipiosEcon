@@ -46,14 +46,14 @@ En su núcleo, la economía es una disciplina sobre **la elección**: cada vez q
 - **Microeconomía**: estudia las decisiones de individuos, hogares y empresas, y cómo interactúan en los mercados.
 - **Macroeconomía**: estudia el comportamiento de la economía en su conjunto: crecimiento, inflación, desempleo, política fiscal y monetaria.
 
-Este curso cubre ambas. Las semanas 1 a 8 son microeconomía; las semanas 9 a 15 son macroeconomía.
+Este curso cubre ambas. Las semanas 1 a 8 son macroeconomía; las semanas 9 a 15 son microeconomía.
 :::
 
 ---
 
 ## El problema central: la escasez
 
-La **escasez** es la condición fundamental de la economía. Los recursos —tiempo, dinero, trabajo, capital, tierra— son limitados. Las necesidades y deseos humanos, no.
+La **escasez** es la condición fundamental de la economía. Los recursos (tiempo, dinero, trabajo, capital y tierra) son limitados. Las necesidades y deseos humanos, no.
 
 Esto significa que toda sociedad, independientemente de su sistema económico, debe responder tres preguntas:
 
@@ -71,67 +71,67 @@ Mankiw organiza los fundamentos de la economía en diez principios, agrupados en
 
 ### Cómo toman decisiones los individuos
 
-**Principio 1 — Los individuos se enfrentan a disyuntivas (*trade-offs*)**
+**Principio 1: Los individuos se enfrentan a disyuntivas (*trade-offs*)**
 
 Obtener algo que queremos generalmente implica renunciar a otra cosa. No hay almuerzo gratis. La sociedad enfrenta el clásico *trade-off* entre **eficiencia** (aprovechar al máximo los recursos) y **equidad** (distribuirlos de manera justa).
 
-**Principio 2 — El costo de algo es aquello a lo que se renuncia para conseguirlo**
+**Principio 2: El costo de algo es aquello a lo que se renuncia para conseguirlo**
 
-Esto es el **costo de oportunidad**: el valor de la mejor alternativa a la que renunciamos al tomar una decisión. Ver la siguiente sección para un desarrollo completo.
+Esto es el **costo de oportunidad**: el valor de la mejor alternativa a la que renunciamos al tomar una decisión. Más sobre esto adelante.
 
-**Principio 3 — Las personas racionales piensan en términos marginales**
+**Principio 3: Las personas racionales piensan en términos marginales**
 
-Las decisiones económicas relevantes no son "¿estudio o no estudio?" sino "¿estudio una hora más o no?". El **análisis marginal** compara el beneficio marginal con el costo marginal de una unidad adicional.
+Las decisiones económicas relevantes no son "¿estudio o no estudio?" sino "¿estudio una hora más o no?". El **análisis marginal** compara el beneficio marginal, $B_{Mg}$, con el costo marginal, $C_{Mg}$ de una unidad adicional.
 
-**Principio 4 — Los individuos responden a los incentivos**
+**Principio 4: Los individuos responden a los incentivos**
 
 Si el costo o el beneficio de una acción cambia, el comportamiento cambia. Los precios son el incentivo más poderoso en una economía de mercado.
 
 ### Cómo interactúan los individuos
 
-**Principio 5 — El comercio puede mejorar el bienestar de todos**
+**Principio 5: El comercio puede mejorar el bienestar de todos**
 
-El intercambio permite la especialización. Un país —o una persona— no necesita producir todo lo que consume para estar mejor.
+El intercambio permite la especialización. Un país, o una persona, no necesita producir todo lo que consume para estar mejor. 
 
-**Principio 6 — Los mercados normalmente son una buena forma de organizar la actividad económica**
+**Principio 6: Los mercados normalmente son una buena forma de organizar la actividad económica**
 
 La "mano invisible" de Adam Smith: los precios coordinan las decisiones de millones de agentes sin que ninguno tenga que conocer el plan completo.
 
-**Principio 7 — El gobierno puede mejorar a veces los resultados del mercado**
+**Principio 7: El gobierno puede mejorar a veces los resultados del mercado**
 
-Cuando existen **fallas de mercado** (externalidades, bienes públicos, poder de mercado, información asimétrica), la intervención del Estado puede mejorar el bienestar. Semana 7 del curso.
+Cuando existen **fallas de mercado** (externalidades, bienes públicos, poder de mercado, información asimétrica), la intervención del Estado puede mejorar el bienestar.
 
 ### Cómo funciona la economía en su conjunto
 
-**Principio 8 — El nivel de vida de un país depende de su capacidad para producir bienes y servicios**
+**Principio 8: El nivel de vida de un país depende de su capacidad para producir bienes y servicios**
 
-La **productividad** —producción por hora de trabajo— es el determinante más importante del nivel de vida a largo plazo.
+La **productividad** o producción por hora de trabajo, es el determinante más importante del nivel de vida a largo plazo.
 
-**Principio 9 — Los precios suben cuando el gobierno imprime demasiado dinero**
+**Principio 9: Los precios suben cuando el gobierno imprime demasiado dinero**
 
-La inflación es, en última instancia, un fenómeno monetario. Semanas 10 y 12.
+"La inflación es, en última instancia, un fenómeno monetario." - Muchos economistas, siempre. En resumen, mucho papel implica que las cosas valgan más.
 
-**Principio 10 — La sociedad se enfrenta a una disyuntiva a corto plazo entre inflación y desempleo**
+**Principio 10: La sociedad se enfrenta a una disyuntiva a corto plazo entre inflación y desempleo**
 
-La curva de Phillips. A corto plazo, reducir la inflación tiene costos en empleo. Semana 14.
+A corto plazo, reducir la inflación tiene costos en empleo. ¿Por qué? La curva de Phillips lo esquematiza. 
 
 ---
 
 ## El costo de oportunidad
 
-El **costo de oportunidad** es el concepto más importante del curso y uno de los más contraintuitivos en la vida cotidiana.
+El **costo de oportunidad** es uno de los conceptos más importante del curso, pero también uno de los más contraintuitivos en la vida cotidiana.
 
 > El costo de oportunidad de una decisión es el valor de la mejor alternativa a la que se renuncia.
 
 ### Ejemplo: ¿ir a la universidad o trabajar?
 
-Suponga que usted decide estudiar en Lead University. Los costos que normalmente considera son:
+Suponga que decide estudiar en Lead University (PS: ya sabemos que sí). Los costos que normalmente considera son:
 
 - Matrícula y mensualidades
 - Libros y materiales
 - Transporte
 
-Pero hay un costo que usualmente se omite: el **ingreso que dejó de ganar** por no trabajar tiempo completo durante los años que dura la carrera. Ese ingreso sacrificado es parte del costo real de estudiar.
+Pero hay un costo que usualmente se omite: el **ingreso que dejó de ganar** por no trabajar tiempo completo durante los años que dura la carrera (los que sí: bare with me for a moment). Ese ingreso sacrificado es parte del costo real de estudiar.
 
 ::: {.callout-warning title="Error común"}
 El costo de oportunidad **no** es la suma de todas las alternativas posibles, sino solo el valor de **la mejor** alternativa disponible. Si tenía dos ofertas de trabajo y eligió estudiar, el costo de oportunidad es el valor de la mejor oferta, no la suma de ambas.
@@ -200,7 +200,7 @@ ggplot(datos_marginal, aes(x = horas, y = valor, color = tipo)) +
   theme(legend.position = "bottom")
 ```
 
-El punto óptimo es donde $BeMg = CoMg$. Estudiar menos de 5 horas deja beneficios sin aprovechar; estudiar más de 5 horas agrega más costo que beneficio.
+El punto óptimo es donde $B_{Mg} = C_{Mg}$. Estudiar menos de 5 horas deja beneficios sin aprovechar; estudiar más de 5 horas agrega más costo que beneficio.
 
 ::: {.callout-note title="Principio del análisis marginal"}
 La mayoría de las decisiones económicas relevantes son **marginales**, no absolutas. No es "¿produzco o no produzco?" sino "¿produzco una unidad más?". No es "¿trabajo o no trabajo?" sino "¿acepto esta hora extra?".
@@ -312,7 +312,7 @@ Un desplazamiento *hacia afuera* de la FPP representa **crecimiento económico**
 |----------|----------------|
 | **Escasez** | Los recursos son limitados; las necesidades, no |
 | **Costo de oportunidad** | Valor de la mejor alternativa sacrificada |
-| **Análisis marginal** | Comparar $BeMg$ vs $CoMg$ de la siguiente unidad |
+| **Análisis marginal** | Comparar $B_{Mg}$ vs $C_{Mg}$ de la siguiente unidad |
 | **Incentivos** | Señales que modifican el comportamiento al alterar costos o beneficios |
 | **Ceteris paribus** | Supuesto de que todo lo demás permanece constante |
 | **FPP** | Modelo que ilustra escasez, eficiencia y costo de oportunidad |

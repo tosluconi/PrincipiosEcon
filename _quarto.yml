@@ -13,6 +13,8 @@ website:
         menu:
           - text: "1. Fundamentos y principios"
             href: notas/01-principios.qmd
+          - text: "1.5 Confianza matemática"
+            href: notas/01.5-matematica.qmd  
           - text: "2. Oferta y demanda"
             href: notas/02-oferta-demanda.qmd
           - text: "3. Eficiencia de los mercados"

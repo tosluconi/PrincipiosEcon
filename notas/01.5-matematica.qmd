@@ -1,0 +1,61 @@
+---
+title: "Semana 1.5: Madurez matemática"
+subtitle: "Dejar de ver símbolos y empezar a hablar este idioma"
+author: "Toscano Luconi Esquivel"
+date: "17 de abril, 2025"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    lang: es
+    highlight-style: github
+    code-fold: true
+    code-tools: true
+    theme: cosmo
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(ggplot2)
+library(dplyr)
+```
+
+## ¿Por qué es importante?
+
+Las matemáticas describen el mundo. Desde lo más pequeño, la fuerza de atracción molecular, hasta lo más grande, el sistema solar. Es muy común - lo sé porque estuve ahí - que uno le tenga miedo a la matemática. Siempre se ha visto como algo más, algo complicado y que muchas veces lo único que nos da son problemas o dolores de cabeza. Creanme cuando les digo que los entiendo, yo estuve ahí. Al día de hoy me cuesta resolver ecuaciones.
+
+Para que vean que no es mentira, vean lo siguiente:
+
+### Modelos matemáticos y sus aplicaciones
+
+| Situación | Ecuación | Uso |
+|---------------|-----------|---------|
+| Atracción de partículas | $$ F = k_e \frac{q_1 \cdot q_2}{r^2}$$ | Determina la fuerza con la que dos partículas se atraen en un campo electromagnético. |
+| Gravitación de planetas| $$ F = G \frac{m_1 \cdot m_2}{r^2}$$ | Determina la fuerza con la que dos estrellas o planetas se atraen entre sí. |
+| Comercio inter-cantonal | $$ C = w \frac{PIB_1 \cdot PIB_2}{d^2}$$ | Determina cuánto van a comerciar dos cantones entre sí. |
+
+
+
+
+
+::: {.callout-tip title="¿Por qué estas lecturas?"}
+El capítulo 1 de Mankiw establece los principios fundamentales que guiarán todo el curso. El capítulo 2 introduce la forma en que los economistas construyen modelos y distinguen entre análisis positivo y normativo. Pindyck amplía esa lógica con mayor rigor formal.
+:::
+
+---
+
+## ¿Qué es la economía?
+
+La economía es la ciencia social que estudia cómo los individuos, las empresas y las sociedades toman decisiones sobre el uso de recursos escasos para satisfacer necesidades ilimitadas.
+
+En su núcleo, la economía es una disciplina sobre **la elección**: cada vez que elegimos algo, estamos renunciando a otra cosa. Esa renuncia tiene un costo, y entenderlo es el punto de partida del análisis económico.
+
+::: {.callout-note title="Distinción fundamental"}
+- **Microeconomía**: estudia las decisiones de individuos, hogares y empresas, y cómo interactúan en los mercados.
+- **Macroeconomía**: estudia el comportamiento de la economía en su conjunto: crecimiento, inflación, desempleo, política fiscal y monetaria.
+
+Este curso cubre ambas. Las semanas 1 a 8 son microeconomía; las semanas 9 a 15 son macroeconomía.
+:::
