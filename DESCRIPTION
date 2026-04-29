@@ -1,0 +1,11 @@
+Package: PrincipiosEcon
+Title: Principios de Economía – BCC4303
+Version: 0.1.0
+Authors@R: person("Toscano", "Luconi Esquivel", role = c("aut", "cre"))
+Description: Materiales del curso BCC4303 – Lead University.
+Imports:
+    knitr,
+    rmarkdown,
+    ggplot2,
+    dplyr,
+    readxl
