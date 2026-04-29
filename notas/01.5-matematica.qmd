@@ -2,7 +2,7 @@
 title: "Semana 1.5: Madurez matemática"
 subtitle: "Dejar de ver símbolos y empezar a hablar este idioma"
 author: "Toscano Luconi Esquivel"
-date: "17 de abril, 2025"
+date: "I Cuatrimestre 2026"
 format:
   html:
     toc: true
@@ -23,39 +23,362 @@ library(ggplot2)
 library(dplyr)
 ```
 
-## ¿Por qué es importante?
+## ¿Por qué dedicamos una sesión a esto?
 
-Las matemáticas describen el mundo. Desde lo más pequeño, la fuerza de atracción molecular, hasta lo más grande, el sistema solar. Es muy común - lo sé porque estuve ahí - que uno le tenga miedo a la matemática. Siempre se ha visto como algo más, algo complicado y que muchas veces lo único que nos da son problemas o dolores de cabeza. Creanme cuando les digo que los entiendo, yo estuve ahí. Al día de hoy me cuesta resolver ecuaciones.
+Las matemáticas describen el mundo. Desde la fuerza de atracción entre partículas hasta la órbita de los planetas, pasando por cuánto comercian dos cantones entre sí, el lenguaje matemático aparece en todas partes. Sé que muchos de ustedes llegaron aquí con cierta incomodidad con los símbolos, los exponentes y las derivadas. Lo entiendo perfectamente, porque yo también estuve ahí.
 
-Para que vean que no es mentira, vean lo siguiente:
+Esta nota no pretende convertirlos en matemáticos. Pretende algo más modesto y más útil: que cuando vean una ecuación en este curso, en vez de cerrar el libro, puedan preguntarse *¿qué está diciendo esto en palabras?* y tengan las herramientas para responder.
 
-### Modelos matemáticos y sus aplicaciones
+Para ilustrar que las matemáticas no son exclusivas de los físicos, aquí van tres ecuaciones de campos muy distintos que tienen exactamente la misma estructura:
 
-| Situación | Ecuación | Uso |
-|---------------|-----------|---------|
-| Atracción de partículas | $$ F = k_e \frac{q_1 \cdot q_2}{r^2}$$ | Determina la fuerza con la que dos partículas se atraen en un campo electromagnético. |
-| Gravitación de planetas| $$ F = G \frac{m_1 \cdot m_2}{r^2}$$ | Determina la fuerza con la que dos estrellas o planetas se atraen entre sí. |
-| Comercio inter-cantonal | $$ C = w \frac{PIB_1 \cdot PIB_2}{d^2}$$ | Determina cuánto van a comerciar dos cantones entre sí. |
+| Situación | Ecuación | ¿Qué relaciona? |
+|-----------|----------|-----------------|
+| Atracción electromagnética | $F = k_e \dfrac{q_1 \cdot q_2}{r^2}$ | Fuerza entre dos cargas eléctricas según su distancia |
+| Gravitación planetaria | $F = G \dfrac{m_1 \cdot m_2}{r^2}$ | Fuerza de atracción entre dos cuerpos con masa |
+| Comercio entre cantones | $C = w \dfrac{PIB_1 \cdot PIB_2}{d^2}$ | Flujo comercial entre dos cantones según su tamaño y distancia |
 
-
-
-
-
-::: {.callout-tip title="¿Por qué estas lecturas?"}
-El capítulo 1 de Mankiw establece los principios fundamentales que guiarán todo el curso. El capítulo 2 introduce la forma en que los economistas construyen modelos y distinguen entre análisis positivo y normativo. Pindyck amplía esa lógica con mayor rigor formal.
+::: {.callout-note title="El modelo de gravedad en comercio"}
+La ecuación de comercio inter-cantonal es el **modelo de gravedad**, uno de los más usados en economía internacional. Su estructura es idéntica a la ley de gravitación de Newton: dos economías más grandes comercian más entre sí, y la distancia reduce ese comercio. Costa Rica lo usa para estimar con quién debería tener tratados de libre comercio.
 :::
 
 ---
 
-## ¿Qué es la economía?
+## Funciones: la herramienta básica
 
-La economía es la ciencia social que estudia cómo los individuos, las empresas y las sociedades toman decisiones sobre el uso de recursos escasos para satisfacer necesidades ilimitadas.
+### ¿Qué es una función?
 
-En su núcleo, la economía es una disciplina sobre **la elección**: cada vez que elegimos algo, estamos renunciando a otra cosa. Esa renuncia tiene un costo, y entenderlo es el punto de partida del análisis económico.
+Una **función** es una regla que asigna a cada valor de una variable (la *entrada*) exactamente un valor de otra variable (la *salida*). En economía, casi todo lo que estudiamos son funciones.
 
-::: {.callout-note title="Distinción fundamental"}
-- **Microeconomía**: estudia las decisiones de individuos, hogares y empresas, y cómo interactúan en los mercados.
-- **Macroeconomía**: estudia el comportamiento de la economía en su conjunto: crecimiento, inflación, desempleo, política fiscal y monetaria.
+$$y = f(x)$$
 
-Este curso cubre ambas. Las semanas 1 a 8 son microeconomía; las semanas 9 a 15 son macroeconomía.
+- $x$ es la variable independiente (la causa, el input).
+- $y$ es la variable dependiente (el efecto, el output).
+- $f$ es la regla que los relaciona.
+
+### Funciones lineales
+
+La forma más sencilla es la función lineal:
+
+$$y = a + bx$$
+
+- $a$ es el **intercepto**: el valor de $y$ cuando $x = 0$.
+- $b$ es la **pendiente**: cuánto cambia $y$ por cada unidad que aumenta $x$.
+
+**Ejemplo económico — curva de demanda lineal:**
+
+$$Q^D = 100 - 5P$$
+
+Si el precio $P$ sube en 1 unidad, la cantidad demandada $Q^D$ cae en 5 unidades. El intercepto (100) es la cantidad máxima que se demandaría si el precio fuera cero.
+
+```{r}
+#| label: fig-lineal
+#| fig-cap: "Curva de demanda lineal: Q = 100 − 5P"
+#| fig-alt: "Línea con pendiente negativa que muestra la relación entre precio y cantidad demandada"
+
+P <- seq(0, 20, by = 0.5)
+Q <- 100 - 5 * P
+datos <- data.frame(P = P, Q = Q) |> filter(Q >= 0)
+
+ggplot(datos, aes(x = Q, y = P)) +
+  geom_line(color = "#2166ac", linewidth = 1.2) +
+  labs(
+    x = "Cantidad (Q)",
+    y = "Precio (P)",
+    title = "Curva de demanda",
+    subtitle = expression(Q^D == 100 - 5 * P)
+  ) +
+  theme_minimal(base_size = 13)
+```
+
+::: {.callout-warning title="Convención en economía"}
+En matemáticas graficamos $y$ en el eje vertical y $x$ en el horizontal. En economía, por convención histórica (Marshall, 1890), graficamos el **precio en el eje vertical** y la **cantidad en el horizontal**, aunque la cantidad es la variable dependiente. No te confundas: la lógica de la función es la misma.
 :::
+
+### Funciones no lineales
+
+No todas las relaciones son lineales. En economía encontramos frecuentemente funciones cuadráticas, logarítmicas y de potencia.
+
+**Ejemplo — costo total cuadrático:**
+
+$$CT = 10 + 2Q + 0.5Q^2$$
+
+A medida que la empresa produce más ($Q$ sube), los costos crecen cada vez más rápido. Esto refleja los **rendimientos decrecientes**.
+
+```{r}
+#| label: fig-cuadratica
+#| fig-cap: "Función de costo total cuadrático"
+#| fig-alt: "Curva convexa de costo total que crece a ritmo creciente"
+
+Q <- seq(0, 15, by = 0.2)
+CT <- 10 + 2 * Q + 0.5 * Q^2
+
+datos_ct <- data.frame(Q = Q, CT = CT)
+
+ggplot(datos_ct, aes(x = Q, y = CT)) +
+  geom_line(color = "#d73027", linewidth = 1.2) +
+  labs(
+    x = "Cantidad producida (Q)",
+    y = "Costo total (CT)",
+    title = "Función de costo total",
+    subtitle = expression(CT == 10 + 2 * Q + 0.5 * Q^2)
+  ) +
+  theme_minimal(base_size = 13)
+```
+
+---
+
+## La derivada: el análisis marginal formalizado
+
+### Intuición
+
+La **derivada** de una función mide *cuánto cambia la variable dependiente cuando la variable independiente cambia en una cantidad muy pequeña*. En economía, eso es exactamente el **análisis marginal**.
+
+$$\frac{dy}{dx} = \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x}$$
+
+No necesitamos calcular límites a mano. Lo que importa es la interpretación: la derivada es la **pendiente** de la función en cada punto.
+
+### Reglas básicas que usaremos
+
+| Función | Derivada | Ejemplo |
+|---------|----------|---------|
+| $y = c$ (constante) | $\dfrac{dy}{dx} = 0$ | $CT = 10 \Rightarrow CMg = 0$ |
+| $y = x^n$ | $\dfrac{dy}{dx} = n \cdot x^{n-1}$ | $CT = Q^2 \Rightarrow CMg = 2Q$ |
+| $y = a + bx$ | $\dfrac{dy}{dx} = b$ | $CT = 10 + 5Q \Rightarrow CMg = 5$ |
+| $y = a + bx + cx^2$ | $\dfrac{dy}{dx} = b + 2cx$ | $CT = 10 + 2Q + 0.5Q^2 \Rightarrow CMg = 2 + Q$ |
+
+### Aplicación: el costo marginal
+
+El **costo marginal** ($CMg$) es la derivada del costo total respecto a la cantidad:
+
+$$CMg = \frac{dCT}{dQ}$$
+
+Para nuestro ejemplo $CT = 10 + 2Q + 0.5Q^2$:
+
+$$CMg = 2 + Q$$
+
+Esto nos dice que cuando la empresa produce la unidad número 5, el costo de esa unidad adicional es $2 + 5 = 7$. Cuando produce la unidad 10, cuesta $2 + 10 = 12$.
+
+```{r}
+#| label: fig-cmg
+#| fig-cap: "Costo total y costo marginal"
+#| fig-alt: "Dos paneles: arriba el costo total creciente con pendiente creciente; abajo el costo marginal lineal creciente"
+
+Q <- seq(0, 15, by = 0.2)
+
+datos_doble <- data.frame(
+  Q   = c(Q, Q),
+  y   = c(10 + 2 * Q + 0.5 * Q^2, 2 + Q),
+  var = rep(c("Costo total (CT)", "Costo marginal (CMg)"), each = length(Q))
+)
+
+ggplot(datos_doble, aes(x = Q, y = y)) +
+  geom_line(color = "#d73027", linewidth = 1.1) +
+  facet_wrap(~var, scales = "free_y") +
+  labs(x = "Cantidad (Q)", y = NULL) +
+  theme_minimal(base_size = 12)
+```
+
+::: {.callout-note title="Costo marginal ≠ costo promedio"}
+El **costo marginal** ($CMg = dCT/dQ$) es el costo de producir *una unidad más*. El **costo promedio** ($CMe = CT/Q$) es el costo *por unidad* considerando toda la producción. Son distintos y se usan para decisiones distintas. Cuando $CMg < CMe$, el promedio baja; cuando $CMg > CMe$, el promedio sube.
+:::
+
+---
+
+## Optimización: encontrar el mejor punto
+
+### La condición de primer orden
+
+En economía constantemente buscamos **maximizar** (beneficios, utilidad, bienestar) o **minimizar** (costos). La herramienta es la misma: igualamos la derivada a cero.
+
+Si queremos maximizar $\pi(Q) = IT(Q) - CT(Q)$:
+
+$$\frac{d\pi}{dQ} = 0 \implies IMg = CMg$$
+
+Esto es exactamente el **principio marginal** de Mankiw en lenguaje matemático: producir hasta donde el ingreso marginal iguala al costo marginal.
+
+### Ejemplo completo
+
+Suponga una empresa con:
+
+- Ingreso total: $IT = 20Q$
+- Costo total: $CT = 10 + 2Q + 0.5Q^2$
+
+La ganancia es:
+
+$$\pi = IT - CT = 20Q - 10 - 2Q - 0.5Q^2 = -10 + 18Q - 0.5Q^2$$
+
+Condición de primer orden:
+
+$$\frac{d\pi}{dQ} = 18 - Q = 0 \implies Q^* = 18$$
+
+```{r}
+#| label: fig-optimo
+#| fig-cap: "Maximización de beneficios: óptimo en Q* = 18"
+#| fig-alt: "Curva de ganancias con forma de parábola invertida y máximo marcado en Q=18"
+
+Q <- seq(0, 36, by = 0.5)
+pi <- -10 + 18 * Q - 0.5 * Q^2
+
+datos_pi <- data.frame(Q = Q, pi = pi)
+
+ggplot(datos_pi, aes(x = Q, y = pi)) +
+  geom_line(color = "#4dac26", linewidth = 1.2) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "gray50") +
+  geom_vline(xintercept = 18, linetype = "dashed", color = "#d73027") +
+  annotate("point", x = 18, y = max(pi), size = 4, color = "#d73027") +
+  annotate("text", x = 19.5, y = max(pi),
+           label = paste0("Q* = 18\nπ* = ", round(max(pi), 1)),
+           hjust = 0, size = 3.5) +
+  labs(
+    x = "Cantidad (Q)",
+    y = "Ganancia (π)",
+    title = "Función de ganancia",
+    subtitle = expression(pi == -10 + 18 * Q - 0.5 * Q^2)
+  ) +
+  theme_minimal(base_size = 13)
+```
+
+---
+
+## Sistemas de ecuaciones: encontrar el equilibrio
+
+### ¿Qué es el equilibrio?
+
+En economía, el **equilibrio** es una situación donde dos fuerzas opuestas se igualan y no hay presión para cambiar. En el mercado, oferta y demanda son esas fuerzas. El equilibrio se encuentra resolviendo el sistema:
+
+$$\begin{cases} Q^D = a - bP \\ Q^S = c + dP \end{cases}$$
+
+En equilibrio: $Q^D = Q^S$
+
+### Ejemplo numérico
+
+$$Q^D = 100 - 5P \qquad Q^S = -20 + 10P$$
+
+Igualamos:
+
+$$100 - 5P = -20 + 10P$$
+$$120 = 15P$$
+$$P^* = 8 \qquad Q^* = 100 - 5(8) = 60$$
+
+```{r}
+#| label: fig-equilibrio
+#| fig-cap: "Equilibrio de mercado: P* = 8, Q* = 60"
+#| fig-alt: "Curvas de oferta y demanda que se cruzan en el punto de equilibrio"
+
+P  <- seq(0, 20, by = 0.1)
+Qd <- 100 - 5 * P
+Qs <- -20 + 10 * P
+
+datos_eq <- data.frame(P = P, Qd = Qd, Qs = Qs) |>
+  filter(Qd >= 0, Qs >= 0)
+
+ggplot(datos_eq) +
+  geom_line(aes(x = Qd, y = P, color = "Demanda"), linewidth = 1.1) +
+  geom_line(aes(x = Qs, y = P, color = "Oferta"),  linewidth = 1.1) +
+  geom_point(aes(x = 60, y = 8), size = 4, color = "black") +
+  annotate("text", x = 63, y = 8.5,
+           label = "Equilibrio\n(Q=60, P=8)", hjust = 0, size = 3.5) +
+  annotate("segment", x = 0, xend = 60, y = 8, yend = 8,
+           linetype = "dashed", color = "gray60") +
+  annotate("segment", x = 60, xend = 60, y = 0, yend = 8,
+           linetype = "dashed", color = "gray60") +
+  scale_color_manual(values = c("Demanda" = "#2166ac", "Oferta" = "#d73027")) +
+  labs(x = "Cantidad (Q)", y = "Precio (P)", color = NULL) +
+  theme_minimal(base_size = 13) +
+  theme(legend.position = "bottom")
+```
+
+---
+
+## Cambios porcentuales y elasticidad
+
+### El cambio porcentual
+
+Muchas variables económicas se analizan mejor en términos relativos que absolutos. Un aumento de ₡500 en el precio de un bien que vale ₡1,000 es muy diferente al mismo aumento en un bien que vale ₡100,000.
+
+$$\Delta\% x = \frac{x_f - x_i}{x_i} \times 100$$
+
+### La elasticidad como razón de cambios porcentuales
+
+La **elasticidad precio de la demanda** mide cuánto responde la cantidad demandada ante un cambio en el precio:
+
+$$\varepsilon = \frac{\Delta\% Q^D}{\Delta\% P} = \frac{dQ}{dP} \cdot \frac{P}{Q}$$
+
+Para nuestra demanda $Q^D = 100 - 5P$:
+
+$$\frac{dQ}{dP} = -5 \qquad \varepsilon = -5 \cdot \frac{P}{Q}$$
+
+En el equilibrio ($P = 8$, $Q = 60$):
+
+$$\varepsilon = -5 \cdot \frac{8}{60} \approx -0.67$$
+
+Como $|\varepsilon| < 1$, la demanda es **inelástica** en ese punto: un aumento del precio del 1% reduce la cantidad demandada solo en un 0.67%.
+
+::: {.callout-note title="Interpretación de la elasticidad"}
+| $|\varepsilon|$ | Denominación | Interpretación |
+|-----------------|-------------|----------------|
+| $= 0$ | Perfectamente inelástica | La cantidad no responde al precio |
+| $< 1$ | Inelástica | La cantidad responde poco al precio |
+| $= 1$ | Unitaria | La cantidad responde proporcionalmente |
+| $> 1$ | Elástica | La cantidad responde más que el precio |
+| $\to \infty$ | Perfectamente elástica | Cualquier cambio en precio anula la demanda |
+:::
+
+---
+
+## Notación que encontrarás en el curso
+
+A lo largo del cuatrimestre aparecerán estos símbolos con frecuencia. Esta tabla es para consultar cuando sientan que perdieron el hilo.
+
+| Símbolo | Se lee | Significa en economía |
+|---------|--------|----------------------|
+| $\Delta x$ | "delta x" | Cambio en $x$ |
+| $\frac{dy}{dx}$ | "derivada de y respecto a x" | Cambio marginal; pendiente |
+| $\sum_{i=1}^{n} x_i$ | "sumatoria de x" | Suma de todos los valores de $x$ |
+| $\bar{x}$ | "x barra" | Promedio de $x$ |
+| $\varepsilon$ | "épsilon" | Elasticidad |
+| $\pi$ | "pi" | Ganancia (beneficio económico) |
+| $Q^*$, $P^*$ | "Q estrella", "P estrella" | Valores de equilibrio |
+| $\approx$ | "aproximadamente igual" | Resultado aproximado |
+| $\implies$ | "implica" | Si ocurre lo anterior, ocurre lo siguiente |
+| $\forall$ | "para todo" | Aplica a todos los valores |
+
+---
+
+## Resumen
+
+La economía moderna es inseparable de las matemáticas. No porque los fenómenos económicos sean mecánicos, sino porque las matemáticas nos permiten ser precisos sobre las relaciones que nos interesan.
+
+Los cuatro conceptos de esta nota —**funciones**, **derivadas**, **sistemas de ecuaciones** y **elasticidades**— reaparecerán en prácticamente cada tema del curso:
+
+- Las funciones de oferta y demanda son funciones lineales.
+- El costo marginal y el ingreso marginal son derivadas.
+- El equilibrio de mercado se encuentra resolviendo un sistema.
+- La elasticidad mide la sensibilidad de esas funciones a cambios en variables clave.
+
+::: {.callout-tip title="Cuando te trabe un símbolo"}
+Pregúntate: *¿qué está midiendo esto en palabras?* Casi siempre la respuesta es más sencilla de lo que parece. Una derivada es "cuánto cambia esto cuando cambio aquello un poquito". Una elasticidad es "cuán sensible es esto a ese cambio". Si podés decirlo en palabras, podés entender la ecuación.
+:::
+
+---
+
+## Preguntas de práctica
+
+1. Dada la función de demanda $Q^D = 80 - 4P$, calcula la cantidad demandada cuando $P = 10$. ¿Cuál es la pendiente de esta función? ¿Qué significa económicamente?
+
+2. La función de costo total de una empresa es $CT = 50 + 3Q + Q^2$. Calcula el costo marginal. ¿En qué cantidad el costo marginal es igual a 13?
+
+3. Con oferta $Q^S = -10 + 3P$ y demanda $Q^D = 50 - 2P$, encuentra el precio y la cantidad de equilibrio.
+
+4. Para la demanda del ejercicio 3, calcula la elasticidad precio en el punto de equilibrio. ¿Es elástica o inelástica?
+
+5. El PIB de Costa Rica creció de ₡35 billones a ₡37.8 billones entre dos años. ¿Cuál fue la tasa de crecimiento porcentual?
+
+---
+
+## Para la próxima semana
+
+**Semana 2 — Oferta, demanda y mercados**
+
+- Leer Mankiw, capítulos 4 y 5.
+- Traer un ejemplo de un mercado costarricense donde el precio cambió notablemente en el último año. Discutiremos si el cambio fue por oferta, demanda, o ambas.

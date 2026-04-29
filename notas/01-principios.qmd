@@ -2,7 +2,7 @@
 title: "Semana 1: Pensar como economista"
 subtitle: "Escasez, costo de oportunidad, incentivos y análisis marginal"
 author: "Toscano Luconi Esquivel"
-date: "15 de mayo, 2025"
+date: "I Cuatrimestre 2026"
 format:
   html:
     toc: true
@@ -28,11 +28,67 @@ library(dplyr)
 | Tipo | Referencia |
 |------|-----------|
 | **Obligatoria** | Mankiw, cap. 1 "Los diez principios de la economía" y cap. 2 "Pensando como economista" |
+| **Complementaria** | Smith, A. (1759). *The Theory of Moral Sentiments*, Parte I (extracto). Disponible en [Project Gutenberg](https://www.gutenberg.org/ebooks/3209). |
 | **Avanzada (opcional)** | Pindyck y Rubinfeld, cap. 1 "Prolegómenos" |
 
 ::: {.callout-tip title="¿Por qué estas lecturas?"}
-El capítulo 1 de Mankiw establece los principios fundamentales que guiarán todo el curso. El capítulo 2 introduce la forma en que los economistas construyen modelos y distinguen entre análisis positivo y normativo. Pindyck amplía esa lógica con mayor rigor formal.
+El capítulo 1 de Mankiw establece los principios que guiarán todo el curso. El capítulo 2 introduce cómo los economistas construyen modelos y distinguen entre análisis positivo y normativo. El extracto de Smith no es técnico: es filosófico. Lo leemos para entender de dónde vienen esos principios antes de que existiera la economía como disciplina formal.
 :::
+
+---
+
+## La pregunta que nos guía
+
+::: {.callout-important title="Pregunta guía del curso"}
+**¿Por qué Costa Rica crece pero la desigualdad sigue alta?**
+
+Esta pregunta nos acompañará durante todo el cuatrimestre. No tiene una respuesta simple. Para construirla necesitamos entender cómo funciona cada mercado (micro), cómo se agrega la economía (macro) y cómo interactúan las instituciones, los incentivos y las políticas. Empezamos aquí, en el origen de la disciplina.
+:::
+
+---
+
+## Del pensamiento moral al análisis científico
+
+### Adam Smith no era economista
+
+Antes de que existiera la economía como disciplina, existía la **filosofía moral**. Adam Smith era profesor de esa materia en la Universidad de Glasgow, y en 1759 publicó su primer libro: *The Theory of Moral Sentiments*. No habla de precios ni de mercados. Habla de empatía y de por qué los seres humanos se preocupan por el bienestar de los demás.
+
+> *"Por más egoísta que se suponga al hombre, hay claramente ciertos principios en su naturaleza que lo llevan a interesarse en la fortuna de los demás."*
+>
+> --- Adam Smith, *Theory of Moral Sentiments*, 1759
+
+Solo diecisiete años después, en 1776, publicó *La Riqueza de las Naciones*. Para Smith, el mercado no era una maquinaria abstracta: era una consecuencia natural de cómo los seres humanos interactuamos. La famosa "mano invisible" no era un mecanismo mecánico; era una metáfora sobre cómo el interés propio, encausado por instituciones adecuadas, puede producir bienestar colectivo.
+
+La pregunta de fondo que Smith se hacía —¿cómo una sociedad de individuos que persiguen su propio interés puede producir orden y prosperidad?— sigue siendo la pregunta central de la economía. Y es también la raíz de nuestra pregunta guía: Costa Rica crece, el PIB sube, pero ¿por qué ese crecimiento no se traduce automáticamente en menor desigualdad?
+
+### Las grandes escuelas: dos siglos de debate
+
+La economía no es un conjunto de verdades reveladas. Es un debate que lleva más de dos siglos. Cada escuela de pensamiento responde la pregunta de Smith de una manera diferente.
+
+| Escuela | Período | Argumento central |
+|---------|---------|-------------------|
+| **Clásica** (Smith, Ricardo, Mill) | S. XVIII–XIX | El mercado libre es el mejor mecanismo de asignación. La libertad de intercambio genera prosperidad. |
+| **Marxista** (Marx, Engels) | S. XIX | El mismo mercado que genera riqueza produce alienación y concentración del poder. La contradicción es interna al sistema. |
+| **Neoclásica** (Marshall, Jevons, Walras) | S. XIX–XX | Formalización matemática del mercado. Nace el *homo economicus*: racional, calculador, perfectamente informado. |
+| **Keynesiana** (Keynes) | S. XX | Los mercados no siempre se equilibran solos. La incertidumbre es irreducible. El Estado debe intervenir activamente. |
+| **Institucionalista** (Veblen, Galbraith, Ostrom) | S. XX | Los mercados no flotan en el vacío: los moldean el poder, los hábitos y las instituciones. |
+| **Conductual** (Kahneman, Thaler) | S. XX–XXI | El *homo economicus* nunca existió. Las personas deciden con sesgos, emociones y atajos cognitivos. |
+
+::: {.callout-note title="¿Por qué importa esto para el curso?"}
+Cuando estudiamos un modelo —la curva de demanda, la FPP, el multiplicador fiscal— ese modelo nació en alguna de estas tradiciones y carga con sus supuestos. Entender de dónde viene cada herramienta nos ayuda a saber cuándo aplicarla y cuáles son sus límites.
+:::
+
+### Samuelson y el precio del rigor
+
+En 1947, Paul Samuelson publicó *Foundations of Economic Analysis* y transformó la disciplina. La economía adoptó el lenguaje de las matemáticas con una ambición comparable a la física: precisión, comparabilidad entre países, capacidad predictiva, bases sólidas para la política pública.
+
+La ganancia fue enorme. Pero también hubo una pérdida: se fue perdiendo la pregunta sobre el *para qué*. Sobre los fines. Sobre la justicia. Sobre qué tipo de sociedad queremos.
+
+> *"Los economistas deben ser humildes y competentes, como los dentistas."*
+>
+> --- John Maynard Keynes
+
+Ningún mapa es el territorio. Los modelos que vamos a aprender —curvas de oferta y demanda, la FPP, el modelo IS-LM— son mapas útiles. Pero el territorio es más rico, más complicado y más humano que cualquier ecuación. El trabajo de este curso es aprender a leer bien esos mapas sin olvidar que hay algo más allá de ellos.
 
 ---
 
@@ -46,7 +102,7 @@ En su núcleo, la economía es una disciplina sobre **la elección**: cada vez q
 - **Microeconomía**: estudia las decisiones de individuos, hogares y empresas, y cómo interactúan en los mercados.
 - **Macroeconomía**: estudia el comportamiento de la economía en su conjunto: crecimiento, inflación, desempleo, política fiscal y monetaria.
 
-Este curso cubre ambas. Las semanas 1 a 8 son macroeconomía; las semanas 9 a 15 son microeconomía.
+Este curso cubre ambas. Las semanas 1 a 8 son microeconomía; las semanas 9 a 15 son macroeconomía.
 :::
 
 ---
